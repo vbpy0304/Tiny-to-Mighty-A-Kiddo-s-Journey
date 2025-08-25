@@ -41,11 +41,11 @@ public class ButtonUI : MonoBehaviour
         // Setup counter UI
         UpdateCounterUI();
 
-        // Wire up button
+        // button
         actionButton.onClick.RemoveAllListeners();
         actionButton.onClick.AddListener(OnButtonClick);
 
-        // Wire up slider
+        // slider
         if (cooldownSlider != null)
         {
             cooldownSlider.minValue = 1f;
