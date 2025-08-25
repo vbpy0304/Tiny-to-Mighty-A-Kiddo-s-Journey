@@ -5,7 +5,7 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject fadePanel;   // panel with Image (full screen)
+    public GameObject fadePanel;   // panel with image
 
     private Image fadeImage;
 
@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    // 🔹 Call this in the inspector OnClick, pass the scene name string
+    // Call this in the inspector OnClick, pass the scene name string
     public void LoadScene(string sceneName)
     {
         StartCoroutine(FadeAndExecute(() =>
@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(FadeAndExecute(() =>
         {
             Application.Quit();
-#if UNITY_EDITOR
+#if UNITY_EDITOR 
             UnityEditor.EditorApplication.isPlaying = false;
 #endif
         }));
