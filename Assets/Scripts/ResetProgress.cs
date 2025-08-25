@@ -9,7 +9,7 @@ public class ResetProgress : MonoBehaviour
         PlayerPrefs.Save();
         Debug.Log("Progress Reset!");
 
-        // Reload current scene so everything resets visually
+        // Reload current scene so everything resets
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
