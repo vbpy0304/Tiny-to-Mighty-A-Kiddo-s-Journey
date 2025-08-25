@@ -4,8 +4,8 @@ using TMPro;
 
 public class Tooltips : MonoBehaviour
 {
-    public GameObject tooltipPanel;   // Panel prefab (assign in Inspector)
-    private AudioSource popAudio;     // Reference to pop sound
+    public GameObject tooltipPanel;   // Panel prefab
+    private AudioSource popAudio;     // Reference to pop sound object
 
     private void Start()
     {
@@ -13,7 +13,7 @@ public class Tooltips : MonoBehaviour
         if (tooltipPanel != null)
             tooltipPanel.SetActive(false);
 
-        // Find GameObject tagged "pop" and get its AudioSource
+        // Find GameObject tagged "pop" and get its audio source
         GameObject popObj = GameObject.FindGameObjectWithTag("pop");
         if (popObj != null)
         {
@@ -27,7 +27,7 @@ public class Tooltips : MonoBehaviour
         {
             tooltipPanel.SetActive(true);
 
-            // Play pop sound if available
+            // Play pop sound
             if (popAudio != null)
             {
                 popAudio.Play();
