@@ -7,7 +7,7 @@ public class PathFollower : MonoBehaviour
     public float moveSpeed = 2f;
 
     private int currentIndex = 0;   // Point player is currently on
-    private int targetIndex = -1;   // Point player is moving to
+    private int targetIndex = -1;   // Pointplayer is moving to
     private bool isMoving = false;
 
     [Header("Free Movement")]
@@ -45,7 +45,7 @@ public class PathFollower : MonoBehaviour
 
         Vector2 clickPos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
-        // Find all "Plane" tagged objects
+        // Find "Plane" tagged things
         GameObject[] planes = GameObject.FindGameObjectsWithTag("Plane");
         foreach (var plane in planes)
         {
@@ -53,9 +53,9 @@ public class PathFollower : MonoBehaviour
             if (sr != null && sr.bounds.Contains(clickPos))
             {
                 targetPos = clickPos;
-                targetIndex = pathPoints.Length; // Flag for free movement
+                targetIndex = pathPoints.Length; // free movement
                 isMoving = true;
-                return; // Stop after finding the first valid plane
+                return; // stop after finding the first valid plane
             }
         }
     }
